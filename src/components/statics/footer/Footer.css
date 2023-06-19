@@ -1,15 +1,15 @@
-.box1{
-    background-color: #3F51B5;
+.fundoFooter1{
+    background-color: #FB747B;
     height: 120px;
 }
 
-.box2{
-    background-color: #303F9F;
+.fundoFooter2{
+    background-color: #FB747B;
     height: 60px;
 }
 
 .redes{
-    font-size: 60px !important;
+    font-size: 40px !important;
     color: white;
 }
 
