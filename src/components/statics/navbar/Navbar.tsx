@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { Box } from '@material-ui/core';
+import './Navbar.css'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -73,7 +74,7 @@ export default function SearchAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className='fundonavbar'>
           <IconButton
             edge="start"
             className={classes.menuButton}
