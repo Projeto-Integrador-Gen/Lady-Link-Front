@@ -10,6 +10,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { Box } from '@material-ui/core';
 import './Navbar.css'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import HomeIcon from '@material-ui/icons/Home';
+import imagem from '../../../assets/Imagem/unsplash_OhKElOkQ3RE.svg'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -75,65 +78,46 @@ function Navbar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar className='fundonavbar'>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
           <Box display="flex" justifyContent="start">
             <Link to="/home" className="text-decorator-none">
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
-                  home
-                </Typography>
+              <HomeIcon />  
               </Box>
             </Link>
 
-            <Link to="/profile" className="text-decorator-none">
-              <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
-                  profile
-                </Typography>
-              </Box>
-            </Link>
-            <Link to="/about" className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                about
-              </Typography>
-            </Box>
-            </Link>
-            
-            <Link to="/login" className="text-decorator-none">
-              <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
-                  logout
-                </Typography>
-              </Box>
-            </Link>
+
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </div>
           </Box>
 
           <Typography className={classes.title} variant="h6" noWrap>
-            
+
           </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="ID da postagem"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ "aria-label": "search" }}
-            />
-          </div>
+
+
+          <Link to="/profile" className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <img src={imagem} alt="Foto de Perfil" />
+            </Box>
+          </Link>
+          <Link to="/login" className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <ExitToAppIcon />
+            </Box>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
   );
-}export default Navbar;
+} export default Navbar;

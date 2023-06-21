@@ -1,8 +1,16 @@
 .cursor{
     cursor: pointer;
-    color: pink;
+    color: rgb(10, 10, 10);
 }
 
 .fundonavbar{
-    background-color: #FB747B;
+    background-color: #a2d2ffff;
+    color: black !important;
+    position: sticky;
 }
+
+
+.profile{
+
+}
+
