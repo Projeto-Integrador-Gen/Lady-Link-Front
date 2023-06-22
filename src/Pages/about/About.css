@@ -1,0 +1,38 @@
+.font{
+    font-family: 'Roboto', sans-serif;;
+}
+
+.fontStyle{
+    font-size: normal;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #6E6E6E;
+    
+}
+
+.iconcenter{
+    display: flex !important;
+    justify-content: center;
+}
+
+.fontcenter{
+    text-align: center;
+}
+
+.imgprofile{
+    border: 1px solid #ddd;
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  
+    cursor: pointer;
+    float: left;
+    text-align: justify;
+}
+
+.palavrachave{
+    font: bold !important;
+}
+
