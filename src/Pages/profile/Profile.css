@@ -1,0 +1,20 @@
+.fundao{
+    background: #F6CBCC;
+    border-radius: 2px 2px 30px 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.titulo{
+    color: white !important;
+    font-Weight: "bolder"
+}
+
+.botao{
+   border-color: white!important;
+   background-color: "#76baad"; 
+   color: white!important; 
+}
+
+.postagens{
+    background-color: #F6CBCC;
+}
