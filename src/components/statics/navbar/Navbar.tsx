@@ -8,11 +8,13 @@ import { createStyles, alpha, Theme, makeStyles } from '@material-ui/core/styles
 import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import AddIcon from '@material-ui/icons/Add';
 import { Box } from '@material-ui/core';
 import './Navbar.css'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import HomeIcon from '@material-ui/icons/Home';
 import imagem from '../../../assets/Imagem/unsplash_OhKElOkQ3RE.svg'
+import { DomainDisabled, Info, InfoOutlined } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -80,8 +82,26 @@ function Navbar() {
         <Toolbar className='fundonavbar'>
           <Box display="flex" justifyContent="start">
             <Link to="/home" className="text-decorator-none">
-              <Box mx={1} className="cursor">
+              <Box mx={3} className="cursor">
               <HomeIcon />  
+              </Box>
+            </Link>
+
+            <Link to="" className="text-decorator-none">
+              <Box mx={3} className="cursor">
+              <AddIcon />  
+              </Box>
+            </Link>
+
+            <Link to="/about" className="text-decorator-none">
+              <Box mx={3} className="cursor">
+              <InfoOutlined />  
+              </Box>
+            </Link>
+
+            <Link to="/nowhere" className="text-decorator-none">
+              <Box mx={3} className="cursor">
+              <DomainDisabled />  
               </Box>
             </Link>
 
@@ -91,7 +111,7 @@ function Navbar() {
                 <SearchIcon />
               </div>
               <InputBase
-                placeholder="Search"
+                placeholder="Oque você quer achar?"
                 classes={{
                   root: classes.inputRoot,
                   input: classes.inputInput,
@@ -101,9 +121,7 @@ function Navbar() {
             </div>
           </Box>
 
-          <Typography className={classes.title} variant="h6" noWrap>
-
-          </Typography>
+          
 
 
           <Link to="/profile" className="text-decorator-none">
