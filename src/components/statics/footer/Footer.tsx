@@ -9,7 +9,7 @@ function Footer() {
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box className='fundoFooter1'>
+                    <Box className='box1'>
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Siga-nos nas redes sociais </Typography>
                         </Box>
@@ -19,7 +19,7 @@ function Footer() {
                             </a>
                         </Box>
                     </Box>
-                    <Box className='fundoFooter2'>
+                    <Box className='box2'>
                         <Box paddingTop={1}>
                             <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >© 2023 Copyright:</Typography>
                         </Box>
