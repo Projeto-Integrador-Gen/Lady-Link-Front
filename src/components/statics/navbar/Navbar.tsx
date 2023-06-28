@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { createStyles, alpha, Theme, makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
@@ -15,6 +15,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import HomeIcon from '@material-ui/icons/Home';
 import imagem from '../../../assets/Imagem/unsplash_OhKElOkQ3RE.svg'
 import { DomainDisabled, Info, InfoOutlined } from '@material-ui/icons';
+import useLocalStorage from 'react-use-localstorage';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -74,7 +75,14 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 function Navbar() {
-  const classes = useStyles();
+  const classes = useStyles, [token, setToken] = useLocalStorage('token');
+  let navigate = useNavigate();
+  
+  function goLogout(){
+      setToken('')
+      alert("Usuário deslogado")
+     navigate('/login')
+  };
 
   return (
     <div className={classes.root}>
@@ -104,7 +112,34 @@ function Navbar() {
               <DomainDisabled />  
               </Box>
             </Link>
-
+            <Link to="/posts" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit">
+                                    postagens
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Link to="/temas" className="text-decorator-none">
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit">
+                                temas
+                            </Typography>
+                        </Box>
+                        </Link>
+                        <Link to="/formularioTema" className="text-decorator-none">
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit">
+                                cadastrar tema
+                            </Typography>
+                        </Box>
+                        </Link>
+                      
+                            <Box mx={1} className='cursor' onClick={goLogout}>
+                                <Typography variant="h6" color="inherit">
+                                    logout
+                                </Typography>
+                            </Box>
+                        
 
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -122,7 +157,6 @@ function Navbar() {
           </Box>
 
           
-
 
           <Link to="/profile" className="text-decorator-none">
             <Box mx={1} className="cursor">
