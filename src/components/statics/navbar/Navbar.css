@@ -3,7 +3,7 @@
     color: rgb(10, 10, 10);
 }
 
-.fundonavbar{
+.fundoNavbar{
     background-color: #a2d2ffff;
     color: black !important;
     position: sticky;
@@ -14,3 +14,7 @@
 
 }
 
+.searchPosition{
+    margin-left: auto;
+    
+}
