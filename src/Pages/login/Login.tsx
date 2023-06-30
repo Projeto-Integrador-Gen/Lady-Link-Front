@@ -7,14 +7,17 @@ import useLocalStorage from "react-use-localstorage";
 import { Box, Button, Grid, TextField, Typography } from "@material-ui/core";
 import UserLogin from "../../models/UserLogin";
 import { login } from "../../services/Service";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../store/tokens/actions";
+import { toast } from "react-toastify";
 
 
 
 
 export default function Login() {
 	let navigate = useNavigate();
-  
-	const [token, setToken] = useLocalStorage('token');
+  const dispatch = useDispatch();
+	const [token, setToken] = useState('');
 	const [userLogin, setUserLogin] = useState<UserLogin>({
 	  id: 0,
 	  usuario: "",
@@ -32,6 +35,7 @@ function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
   useEffect(() => {
     if (token != "") {
+      dispatch(addToken(token));
       navigate("/home");
     }
   }, [token]);
@@ -40,11 +44,27 @@ function updatedModel(e: ChangeEvent<HTMLInputElement>) {
     e.preventDefault();
     try {
       await login(`usuarios/logar`, userLogin, setToken);
-      alert("Bem-vindo, você ja está logado com sucesso");
+      toast.success('Bem vindo! Usuário logado com sucesso!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined   
+       });  
     } catch (error) {
-      alert(
-        "Oops, o e-mail ou a senha estão erradas, confira e tente novamente"
-      );
+        toast.error('Oops E-mail ou senha incorretos!', {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined   
+    });      
     }
   }
 

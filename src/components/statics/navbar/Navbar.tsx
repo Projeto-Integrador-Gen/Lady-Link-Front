@@ -16,6 +16,9 @@ import HomeIcon from '@material-ui/icons/Home';
 import imagem from '../../../assets/Imagem/unsplash_OhKElOkQ3RE.svg'
 import { DomainDisabled, Info, InfoOutlined } from '@material-ui/icons';
 import useLocalStorage from 'react-use-localstorage';
+import { toast } from 'react-toastify';
+import { addToken } from '../../../store/tokens/actions';
+import { useDispatch } from 'react-redux';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -77,13 +80,24 @@ const useStyles = makeStyles((theme: Theme) =>
 function Navbar() {
   const classes = useStyles, [token, setToken] = useLocalStorage('token');
   let navigate = useNavigate();
+  const dispatch = useDispatch();
   
   function goLogout(){
-      setToken('')
-      alert("Usuário deslogado")
+    dispatch(addToken(''));
+      toast.info('Usuário deslogado', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined   
+       });
      navigate('/login')
   };
 
+    
   return (
     <div className={classes.root}>
       <AppBar position="static">

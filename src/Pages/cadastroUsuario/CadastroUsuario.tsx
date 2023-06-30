@@ -6,6 +6,7 @@ import { Grid, Typography, Button, TextField } from '@material-ui/core';
 import {Box} from '@mui/material';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
+import { toast } from 'react-toastify';
 
 function CadastroUsuario() {
 
@@ -51,30 +52,84 @@ function CadastroUsuario() {
         e.preventDefault()
 
         if (user.nome.length < 3) {
-            alert('O nome deve ter pelo menos 3 caracteres.');
+            toast.info('O nome deve ter pelo menos 3 caracteres.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined   
+               });
             return;
         }
 
         if (!user.usuario.includes('@') && !user.usuario.includes('.')) {
-            alert('e-mail inválido para cadastro');
+            toast.info('e-mail inválido para cadastro', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined   
+               });
             return;
         }
 
         if (user.usuario.length <= 6){
-            alert('digite no mínimo 6 caracteres no seu usuario');
+            toast.info('digite no mínimo 6 caracteres no seu usuario.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined   
+               });
             return;
         }
 
         if (user.senha.length < 8) {
-            alert('A senha deve ter pelo menos 8 caracteres.');
+            toast.info('A senha deve ter pelo menos 8 caracteres.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined   
+               });
             return;
         }
 
         if(confirmarSenha == user.senha){
         cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-        alert('Sucesso, bem vindo a LadyLink')
+        toast.success('Sucesso, bem vindo a LadyLink.', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined   
+           });
         }else{
-            alert('Oops, as senhas não são as mesmas.')
+            toast.info('Oops, as senhas não são as mesmas.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined   
+               });
         }
     }
     return (
