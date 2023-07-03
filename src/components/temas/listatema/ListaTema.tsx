@@ -1,10 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
-=======
 import { Card, CardActions, CardContent, Button, Typography, makeStyles, CardActionArea, CardMedia } from '@material-ui/core';
->>>>>>> 7a29a0a245327f072e32589388916ed5bfa29d5f
 import { Box } from '@mui/material';
 import Tema from '../../../models/Tema';
 import './ListaTema.css';
@@ -66,16 +62,7 @@ async function getTema() {
   return (
     <>
       {temas.map(tema => (
-<<<<<<< HEAD
-        <Grid item xs={10} className='caixa'>
-        <Box m={2} key={tema.id}>
-          <Card variant="outlined">
-            <CardContent>
-              <Typography color="textSecondary" gutterBottom>
-                Temas
-              </Typography>
-              <Typography variant="h5" component="h2">
-=======
+
         <>
           <Card className='teste'>
           <CardActionArea>
@@ -86,7 +73,6 @@ async function getTema() {
               />
               <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
->>>>>>> 7a29a0a245327f072e32589388916ed5bfa29d5f
                 {tema.titulo}
               </Typography>
               </CardContent>
@@ -105,12 +91,8 @@ async function getTema() {
                 </Link>
             </CardActions>
           </Card>
-<<<<<<< HEAD
-        </Box>
-        </Grid>
-=======
+
         </>
->>>>>>> 7a29a0a245327f072e32589388916ed5bfa29d5f
       ))}
     </>
   );
