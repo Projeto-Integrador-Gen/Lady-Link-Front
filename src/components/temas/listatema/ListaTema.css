@@ -1,3 +1,50 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.btn{
+    align-items: center !important;
+    border-radius: 50px !important;
+    height: 3rem !important;
+    gap: 1rem !important;
+    float: right !important;
+}
+
+.card{
+    
+    width: 345px;
+    gap: 3rem;
+}
+
+.titulo{
+
+    height: 140px;
+    gap: 3rem;
+    
+}
+
+.teste{
+    margin-bottom: 20px !important;
+    margin-top: 10px !important;
+    margin-left: 20px;
+}
+
+.btn-left{
+    float: left !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.btn-right{
+    float: right !important;
+}
+.hash{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: 20px !important;
+}
+

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography, makeStyles, CardActionArea, CardMedia } from '@material-ui/core';
 import { Box } from '@mui/material';
 import Tema from '../../../models/Tema';
 import './ListaTema.css';
@@ -9,6 +9,7 @@ import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { DeleteOutlineRounded, SyncRounded } from '@material-ui/icons';
 
 function ListaTema() {
   const [temas, setTemas] = useState<Tema[]>([]);
@@ -46,41 +47,50 @@ async function getTema() {
     getTema();
   }, [temas.length]);
 
+  const useStyles = makeStyles({
+    root: {
+      maxWidth: 345,
+    },
+    media: {
+      height: 140,
+    },
+  });
+  const classes = useStyles();
+
 
 
   return (
     <>
       {temas.map(tema => (
-        <Box m={2} key={tema.id}>
-          <Card variant="outlined">
-            <CardContent>
-              <Typography color="textSecondary" gutterBottom>
-                Temas
-              </Typography>
-              <Typography variant="h5" component="h2">
+        <>
+          <Card className='teste'>
+          <CardActionArea>
+          <CardMedia
+          className='titulo'
+          image="/static/images/cards/contemplative-reptile.jpg"
+              title={tema.titulo}
+              />
+              <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
                 {tema.titulo}
               </Typography>
-            </CardContent>
-            <CardActions>
-              <Box display="flex" justifyContent="center" mb={1.5}>
+              </CardContent>
+              </CardActionArea>
+            
+              <CardActions className='btn-right'>
                 <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
-                  <Box mx={1}>
-                    <Button variant="contained" className="marginLeft" size='small' color="primary">
-                      atualizar
+                  <Button className='btn'>
+                   <SyncRounded/>
                     </Button>
-                  </Box>
                 </Link>
                 <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
-                  <Box mx={1}>
-                    <Button variant="contained" size='small' color="secondary">
-                      deletar
+                <Button className='btn'>
+                <DeleteOutlineRounded/>
                     </Button>
-                  </Box>
                 </Link>
-              </Box>
             </CardActions>
           </Card>
-        </Box>
+        </>
       ))}
     </>
   );
