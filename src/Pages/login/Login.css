@@ -1,18 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
 	box-sizing: border-box;
 }
-body{
 
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-	justify-content: center;
-	align-items: center;
-    
-    
-    
-}
 
 h1 {
 	font-weight: bold;
@@ -97,6 +87,7 @@ input {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
+	
 }
 
 .form-container {
