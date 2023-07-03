@@ -1,3 +1,14 @@
 .topo{
     margin-top: 20px;
 }
+
+.post{
+    font-family: 'Roboto', sans-serif;
+    font-size: 75px !important;
+}
+
+.btn-submit{
+    box-sizing: border-box !important;
+    border-radius: 30px !important;
+    margin-top: 10px !important;
+}

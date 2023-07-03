@@ -1,37 +1,22 @@
 import React from 'react'
-import {Typography, Grid, Button} from '@material-ui/core';
+import {Typography, Grid, Button, Paper} from '@material-ui/core';
 import {Box} from '@mui/material';
 import './profile.css';
 import Woman from "../../assets/Imagem/woman.png"
+import ListaPostagem from '../../components/postagens/listapostagem/ListaPostagem';
 
 function Profile (){
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className='fundao'>
-                <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                        <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Seus pensamentos têm o poder de criar impacto. Compartilhe-os e faça a diferença!</Typography>
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                        <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Seus pensamentos têm o poder de criar impacto. Compartilhe-os e faça a diferença!</Typography>
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                        <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Seus pensamentos têm o poder de criar impacto. Compartilhe-os e faça a diferença!</Typography>
-                        <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Seus pensamentos têm o poder de criar impacto. Compartilhe-os e faça a diferença!</Typography>
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                        <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Seus pensamentos têm o poder de criar impacto. Compartilhe-os e faça a diferença!</Typography>                    
-                    </Box>
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
-                        </Box>
-                        <Button variant="outlined" className='botao'>Visualizar Perfil</Button>
-                    </Box>
-                </Grid>
-                <Grid item xs={6} >
-                    <img src={Woman} alt="" width="50px" height="50px" />
-                </Grid>                
-                <Grid xs={12} className='postagens'>
-                </Grid>
-            </Grid>
+            <Grid container spacing={0}>
+        <Grid  className='profile' item xs={2}>
+            <img className='img' src="https://th.bing.com/th/id/R.3c958a0b126f5064c6c3acdef009e782?rik=pNuUKUk%2bh3NSpw&riu=http%3a%2f%2fimagem.band.com.br%2fzoom%2ff_201977.jpg&ehk=l1aFNZItb6jkA6G7DTeCzofO5tJoU%2fSy%2fwGcfCL3%2fZ4%3d&risl=&pid=ImgRaw&r=0" alt="" />
+            <h1 className='name'>Naldo Benny</h1>
+        </Grid>
+        <Grid className='post' item xs={10}>
+        <ListaPostagem/>
+        </Grid>
+      </Grid>
         </>
     );
 

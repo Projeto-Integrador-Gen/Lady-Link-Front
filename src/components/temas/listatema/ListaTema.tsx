@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import { Box } from '@mui/material';
 import Tema from '../../../models/Tema';
 import './ListaTema.css';
@@ -51,6 +51,7 @@ async function getTema() {
   return (
     <>
       {temas.map(tema => (
+        <Grid item xs={10} className='caixa'>
         <Box m={2} key={tema.id}>
           <Card variant="outlined">
             <CardContent>
@@ -81,6 +82,7 @@ async function getTema() {
             </CardActions>
           </Card>
         </Box>
+        </Grid>
       ))}
     </>
   );

@@ -1,20 +1,25 @@
-.fundao{
-    background: #F6CBCC;
-    border-radius: 2px 2px 30px 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.profile{
+    height: auto;
+    background-color: #A4133C  !important;
+    margin-top: 10px !important;
+    border-radius: 20px;
+    margin-bottom: 20px !important;
 }
 
-.titulo{
-    color: white !important;
-    font-Weight: "bolder"
+.post{
+    border-radius: 30px !important;
+    height: auto !important;
 }
 
-.botao{
-   border-color: white!important;
-   background-color: "#76baad"; 
-   color: white!important; 
+.img{
+    margin-left: 27px;
+    margin-top: 40px;
+    height: 250px;
+    width: 250px;
+    border-radius: 125px;
 }
 
-.postagens{
-    background-color: #F6CBCC;
+.name{
+    margin-top: 20px;
+    margin-left: 70px;
 }

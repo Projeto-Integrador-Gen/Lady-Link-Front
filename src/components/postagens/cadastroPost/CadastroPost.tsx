@@ -162,7 +162,7 @@ function CadastroPost() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
+                <Typography className='post' >New Post</Typography>
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
                 <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="conteudo" name="conteudo" variant="outlined" margin="normal" fullWidth />
 
@@ -182,9 +182,9 @@ function CadastroPost() {
                             ))
                         }
                     </Select>
-                    <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
-                        Finalizar
+                    <FormHelperText>Selecione o Tema</FormHelperText>
+                    <Button className='btn-submit' type="submit">
+                    <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/100/filled-sent.png" alt="filled-sent"/>
                     </Button>
                 </FormControl>
             </form>
