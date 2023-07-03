@@ -1,7 +1,16 @@
 .box1{
-    background-color: #cdb4dbd5;
+    background: rgb(255,240,243);
+background: linear-gradient(180deg, rgba(255,240,243,1) 0%, rgba(255,255,255,1) 100%);
+    color: black ;
+    border-radius: 30px 30px 2px 2px;
+
 }
 
-.box2{
-    background-color: #ffafccc1;
+
+.espacamento{
+    border-top: 0.4px solid #979495 !important;
+    padding-top: 10px ;
+    color: black;
+    display: inline ;
+    justify-content: center !important;
 }
