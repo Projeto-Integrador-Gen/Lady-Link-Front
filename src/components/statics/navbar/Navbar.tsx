@@ -11,10 +11,10 @@ import { BottomNavigation, BottomNavigationAction, Box, FormControlLabel, FormGr
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { useNavigate } from 'react-router-dom';
-import {useDispatch, useSelector} from "react-redux";
-import {TokenState} from "../../../store/tokens/tokensReducer.ts";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokensReducer.ts";
 import { InfoOutlined } from '@material-ui/icons';
-import {addToken} from "../../../store/tokens/actions.ts";
+import { addToken } from "../../../store/tokens/actions.ts";
 import CategoryOutlinedIcon from '@material-ui/icons/CategoryOutlined';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import ReorderRoundedIcon from '@material-ui/icons/ReorderRounded';
@@ -22,6 +22,7 @@ import PlaylistAddCheckRoundedIcon from '@material-ui/icons/PlaylistAddCheckRoun
 import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
 import { blue, red } from '@material-ui/core/colors';
 import InfoRoundedIcon from '@material-ui/icons/InfoRounded';
+import PersonOutlineRoundedIcon from '@material-ui/icons/PersonOutlineRounded';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -93,17 +94,17 @@ export default function Navbar() {
 
   let navigate = useNavigate();
   const token = useSelector<TokenState, TokenState["tokens"]>(
-      (state) => state.tokens
+    (state) => state.tokens
   );
   const dispatch = useDispatch();
   function goLogout() {
     dispatch(addToken(''))
     alert("Tchau, até logo mais")
     navigate('/login')
-    
+
   }
 
-  const classes = useStyles(); 
+  const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -120,7 +121,7 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
-//BottomNavigation Rules
+  //BottomNavigation Rules
 
   const classesB = useStylesB();
   const [value, setValue] = React.useState('home');
@@ -131,24 +132,23 @@ export default function Navbar() {
 
 
 
-  var navbarComponent ;
+  var navbarComponent;
 
-  if (token != ''){
+  if (token != '') {
 
     navbarComponent = (
       <div className={classes.root}>
         <AppBar position="static" className="fundoappbar">
           <Toolbar>
-            <Box className="navigation">
+            <Box className={"navigation"}>
               
-              <Box className="botoes">
-              
-              <Link to="/home" className="text-decorator-none">
-                <Box mx={1} className="cursor">
+
+
+                <Link to="/home" className="text-decorator-none">
                   <BottomNavigation
                     value={value}
                     onChange={handleChangeBottom}
-                    className={classes.rootB}
+                    className={"navigation"}
                   >
                     <BottomNavigationAction
                       label="Home"
@@ -156,101 +156,91 @@ export default function Navbar() {
                       icon={<HomeRoundedIcon />}
                     />
                   </BottomNavigation>
-                </Box>
-              </Link>
+                </Link>
 
-              <Link to="/posts" className="text-decorator-none">
-                <Box mx={1} className="cursor">
-                  <BottomNavigation
-                    value={value}
-                    onChange={handleChangeBottom}
-                    className={classes.rootB}
-                  >
-                    <BottomNavigationAction
-                      label="Posts"
-                      value="post"
-                      icon={<CategoryOutlinedIcon />}
-                    />
-                  </BottomNavigation>
-                </Box>
-              </Link>
-
-              <Link to="/temas" className="text-decorator-none">
-                <Box mx={0} className="cursor">
-                  <BottomNavigation
-                    value={value}
-                    onChange={handleChangeBottom}
-                    className={classes.rootB}
-                  >
-                    <BottomNavigationAction
-                      label="Temas"
-                      value="temas"
-                      icon={<ReorderRoundedIcon />}
-                    />
-                  </BottomNavigation>
-                </Box>
-              </Link>
-
-              <Link to="/formularioTema" className="text-decorator-none">
-                <Box mx={1} className="cursor">
-                  <BottomNavigation
-                    value={value}
-                    onChange={handleChangeBottom}
-                    className={classes.rootB}
-                  >
-                    <BottomNavigationAction
-                      label="+ Tema"
-                      value="tema"
-                      icon={<PlaylistAddCheckRoundedIcon />}
-                    />
-                  </BottomNavigation>
-                </Box>
-              </Link>
-
-              
-              <Link className="text-decorator-none" to={""}>
-                <Box mx={1} className="cursor">
+                <Link to="/posts" className="text-decorator-none">
+                  <Box mx={1} className="cursor">
                     <BottomNavigation
                       value={value}
                       onChange={handleChangeBottom}
-                      className={classes.root}
+                      className={"navigation"}
                     >
                       <BottomNavigationAction
-                        label="Logout"
-                        value="logout"
-                        icon={<ExitToAppRoundedIcon />}
+                        label="Posts"
+                        value="post"
+                        icon={<CategoryOutlinedIcon />}
                       />
                     </BottomNavigation>
                   </Box>
-              </Link>
+                </Link>
 
-              <Link to="/about" className="text-decorator-none">
-                <Box mx={1} className="cursor">
-                  <Typography
-                    className={classes.title}
-                    variant="h6"
-                    noWrap
-                    color="inherit"
-                    
-                  >
-                    <InfoOutlined />
-                    
+                <Link to="/temas" className="text-decorator-none">
+                  <Box mx={0} className="cursor">
+                    <BottomNavigation
+                      value={value}
+                      onChange={handleChangeBottom}
+                      className={"navigation"}
+                    >
+                      <BottomNavigationAction
+                        label="Temas"
+                        value="temas"
+                        icon={<ReorderRoundedIcon />}
+                      />
+                    </BottomNavigation>
+                  </Box>
+                </Link>
 
-                  </Typography>
-                </Box>
-              </Link>
+                <Link to="/formularioTema" className="text-decorator-none">
+                  <Box mx={1} className="cursor">
+                    <BottomNavigation
+                      value={value}
+                      onChange={handleChangeBottom}
+                      className={"navigation"}
+                    >
+                      <BottomNavigationAction
+                        label="+ Tema"
+                        value="tema"
+                        icon={<PlaylistAddCheckRoundedIcon />}
+                      />
+                    </BottomNavigation>
+                  </Box>
+                </Link>
 
-              <Link to="/profile" className="text-decorator-none">
-                <Box mx={1} className="cursor">
-                  <Typography variant="h6" color="inherit">
-                    profile
-                  </Typography>
-                </Box>
-              </Link>
+                <Link to="/about" className="text-decorator-none">
+                  <Box mx={1} className="cursor">
+                    <BottomNavigation
+                      value={value}
+                      onChange={handleChangeBottom}
+                      className={"navigation"}
+                    >
+                      <BottomNavigationAction
+                        label="About"
+                        value="about"
+                        icon={<InfoOutlined />}
+                      />
+                    </BottomNavigation>
+                  </Box>
+                </Link>
+
+                <Link to="/profile" className="text-decorator-none">
+                  <Box mx={1} className="cursor">
+                    <BottomNavigation
+                      value={value}
+                      onChange={handleChangeBottom}
+                      className={"navigation"}
+                    >
+                      <BottomNavigationAction
+                        label="Perfil"
+                        value="perfil"
+                        icon={<PersonOutlineRoundedIcon />}
+                      />
+                    </BottomNavigation>
+                  </Box>
+                </Link>
+
 
               
 
-              </Box>
               <Box mx={1}>
                 <div className="searchPosition">
                   <div className={classes.search}>
@@ -269,23 +259,21 @@ export default function Navbar() {
                 </div>
               </Box>
 
-              <Link to={""}>
-                <Box mx={1}>
-                  <FormGroup>
-                    <FormControlLabel
-                      control={
-                        <Switch
-                          checked={auth}
-                          onChange={handleChange}
-                          onAnimationEnd={goLogout}
-                          aria-label="login switch"
-                        />
-                      }
-                      label={auth ? "Sair" : "Tchau👋"}
-                    />
-                  </FormGroup>
-                </Box>
-              </Link>
+              <Box mx={1}>
+                <FormGroup>
+                  <FormControlLabel
+                    control={
+                      <Switch
+                        checked={auth}
+                        onChange={handleChange}
+                        onAnimationEnd={goLogout}
+                        aria-label="login switch"
+                      />
+                    }
+                    label={auth ? "Sair" : "Tchau👋"}
+                  />
+                </FormGroup>
+              </Box>
             </Box>
           </Toolbar>
         </AppBar>
@@ -294,8 +282,8 @@ export default function Navbar() {
   }
 
   return (
-      <>
-        {navbarComponent}
-      </>
+    <>
+      {navbarComponent}
+    </>
   );
 }
