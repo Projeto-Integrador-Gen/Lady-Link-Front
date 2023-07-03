@@ -107,14 +107,14 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
-  var navbarComponent;
+  var navbarComponent ;
 
   if (token != ''){
 
     navbarComponent = (
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
+      <div className={classes.root} >
+        <AppBar position="static" className='fundoappbar'>
+          <Toolbar >
           <FormGroup >
                 <FormControlLabel
                   control={

@@ -1,11 +1,16 @@
 .cursor{
     cursor: pointer;
-    color: rgb(10, 10, 10);
+    color: rgb(241, 241, 241);
+}
+
+.fundoappbar{
+    background-color: #cdb4dbd5 !important;
+
 }
 
 .fundoNavbar{
-    background-color: #a2d2ffff;
-    color: black !important;
+    background-color: rgb(250, 253, 255);
+    color: rgb(252, 251, 251) !important;
     position: sticky;
 }
 

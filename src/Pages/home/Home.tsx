@@ -4,7 +4,9 @@ import { Box } from '@mui/material';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import './Home.css'
-import Woman from "../../assets/Imagem/woman.png"
+import woman3 from "../../assets/Imagem/undraw_software_engineer_re_tnjc.svg";
+import unsplash from "../../assets/react.svg";
+
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
@@ -39,16 +41,10 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className='fundao'>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                        <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ratione aspernatur, amet labore consequatur perferendis cupiditate placeat deserunt libero, excepturi repellendus ex ad minus sit tenetur reiciendis adipisci expedita iusto?</Typography>
-                    </Box><Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                    <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aut aperiam, aliquid numquam ullam unde, eum quia dolorum optio illum dolorem, ratione impedit et similique quasi eos ab maxime tempore.</Typography>
-                    <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                    <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatem quisquam ratione odit in incidunt placeat quaerat. Reprehenderit nobis eius cum, esse earum optio! Eos officia ratione ipsa numquam iure.</Typography>
-                    <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                    <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas aperiam veniam consequatur veritatis unde alias vero mollitia porro voluptates, quod natus sapiente nam eligendi necessitatibus ex ea quibusdam temporibus expedita.</Typography>
-                    <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                    <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, quaerat eligendi inventore exercitationem incidunt aperiam mollitia, officiis iusto tenetur ad earum aut non praesentium beatae. Laboriosam explicabo dolorem amet aperiam.</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
+                        <Typography variant="h6" gutterBottom color="textPrimary" component="h6" align="center" className='titulo'>Mesmo que as empresas tenham vontade de mudar o cenário atual empregando mais mulheres, é importante lembrar que a igualdade de gênero no mercado de trabalho ainda é um reflexo de um conjunto de crenças e práticas antigas, que necessitam de planejamento e ação para serem definitivamente deixadas de lado.</Typography>
+                    </Box><Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Oportunidades!</Typography>
+                    
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
                             <ModalPostagem />
@@ -57,7 +53,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src={Woman} alt="" width="50px" height="50px" />
+                    <img src={woman3} alt="" width="600px" height="600px" />
                 </Grid>
                 <Grid item className='postagens'>
                     <TabPostagem />
