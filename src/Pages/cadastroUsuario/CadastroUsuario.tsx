@@ -1,17 +1,18 @@
-import React , {useState, useEffect, ChangeEvent } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import User from '../../models/User';
 import { cadastroUsuario } from '../../services/Service';
 import { Grid, Typography, Button, TextField } from '@material-ui/core';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
 import { toast } from 'react-toastify';
 
+
 function CadastroUsuario() {
 
     let navigate = useNavigate();
-    const [confirmarSenha,setConfirmarSenha] = useState<String>("")
+    const [confirmarSenha, setConfirmarSenha] = useState<String>("")
     const [user, setUser] = useState<User>(
         {
             id: 0,
@@ -35,7 +36,7 @@ function CadastroUsuario() {
     }, [userResult])
 
 
-    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
         setConfirmarSenha(e.target.value)
     }
 
@@ -60,8 +61,8 @@ function CadastroUsuario() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: undefined   
-               });
+                progress: undefined
+            });
             return;
         }
 
@@ -74,12 +75,12 @@ function CadastroUsuario() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: undefined   
-               });
+                progress: undefined
+            });
             return;
         }
 
-        if (user.usuario.length <= 6){
+        if (user.usuario.length <= 6) {
             toast.info('digite no mínimo 6 caracteres no seu usuario.', {
                 position: "top-right",
                 autoClose: 2000,
@@ -88,8 +89,8 @@ function CadastroUsuario() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: undefined   
-               });
+                progress: undefined
+            });
             return;
         }
 
@@ -102,24 +103,24 @@ function CadastroUsuario() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: undefined   
-               });
+                progress: undefined
+            });
             return;
         }
 
-        if(confirmarSenha == user.senha){
-        cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-        toast.success('Sucesso, bem vindo a LadyLink.', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined   
-           });
-        }else{
+        if (confirmarSenha == user.senha) {
+            cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
+            toast.success('Sucesso, bem vindo a LadyLink.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
+        } else {
             toast.info('Oops, as senhas não são as mesmas.', {
                 position: "top-right",
                 autoClose: 2000,
@@ -128,42 +129,67 @@ function CadastroUsuario() {
                 pauseOnHover: false,
                 draggable: false,
                 theme: "colored",
-                progress: undefined   
-               });
+                progress: undefined
+            });
         }
     }
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
-            <Grid item xs={6} className='imagem2'></Grid>
-            <Grid item xs={6} alignItems='center'>
-                <Box paddingX={10}>
-                    <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
-                        <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}  placeholder='mínimo de 3 caracteres' id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth />
-                        <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} placeholder='coloque um e-mail válido' id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal'fullWidth />
-                        <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} placeholder='mínimo de 8 caracteres' id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
-                        <Box marginTop={2} textAlign='center'>
-                            <Link to='/login' className='text-decorator-none'>
-                                <Button variant='contained' color='secondary' className='btnCancelar'>
-                                    Cancelar
-                                </Button>
-                            </Link>
-                            <Link to='/login' className='text-decorator-none'>
-                                
-                            </Link>
-                            <Button type='submit' variant='contained' color='primary'>
-                                    Cadastrar
-                            </Button>
-                        </Box>
-                    </form>
-                </Box>
-            </Grid>
+        <div className="container" id="container">
+           <div className="form-container sign-in-container">            
+            <form onSubmit={onSubmit}>
+                <h1>Criar Conta</h1>
+                <input
+                    value={user.nome}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                    id='nome'
+                    type="text"
+                    placeholder="Nome Completo"
+                    name='nome'
+                />
+                <input
+                    value={user.usuario}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                    id='user'
+                    type="email"
+                    placeholder="Email"
+                    name='usuario'
+                />
+                <input
+                    value={user.senha}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                    id='senha'
+                    type="password"
+                    placeholder="Senha"
+                    name='senha'
+                />
+                <input
+                    value={confirmarSenha}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
+                    id='confirmarSenha'
+                    type="password"
+                    placeholder="Confirmar Senha"
+                    name='confirmarSenha'
+                />
+                <button type="submit">Criar</button>
+            </form>
+            </div>
+            <div className="overlay-container">
+                <div className="overlay">
+                    <div className="overlay-panel overlay-right">
+                        <h1>Que Saudades!</h1>
+                        <p>Vamos se conectar e publicar para o mundo todo ver?</p>
+                        <Link to='/login'>
+                            <button className="ghost" id="signIn">
+                                Logar
+                            </button>
+                        </Link>
+                    </div>
+                   
+                </div>
+                </div>
+            </div>
 
-
-
-        </Grid>
-    );
+            );
 }
 
-export default CadastroUsuario;
+            export default CadastroUsuario;
