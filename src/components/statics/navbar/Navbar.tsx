@@ -112,30 +112,27 @@ export default function Navbar() {
   if (token != ''){
 
     navbarComponent = (
-      <div className={classes.root} >
-        <AppBar position="static" className='fundoappbar'>
-          <Toolbar >
-          <FormGroup >
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={auth}
-                      onChange={handleChange}
-                      aria-label="login switch"
-                    />
-                  }
-                  label={auth ? "Sair" : "tchau!!"}
-                />
-              </FormGroup>
+      <div className={classes.root}>
+        <AppBar position="static" className="fundoappbar">
+          <Toolbar>
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={auth}
+                    onChange={handleChange}
+                    aria-label="login switch"
+                  />
+                }
+                label={auth ? "Sair" : "tchau!!"}
+              />
+            </FormGroup>
 
-              <Box onClick={goLogout} mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
-                  logout
-                </Typography>
-              </Box>
-
-
-              
+            <Box onClick={goLogout} mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                logout
+              </Typography>
+            </Box>
 
             <Box display="flex" justifyContent="start">
               <Link to="/home" className="text-decorator-none">
@@ -171,36 +168,39 @@ export default function Navbar() {
               </Link>
 
               
-              
 
               <Link to="/about" className="text-decorator-none">
                 <Box mx={3} className="cursor">
-                <Typography className={classes.title} variant="h6" noWrap color="inherit">
+                  <Typography className={classes.title}variant="h6" noWrap  color="inherit"  >
                     info
                   </Typography>
                 </Box>
               </Link>
 
-
+              <Link to="/profile" className="text-decorator-none">
+                <Box mx={1} className="cursor">
+                  <Typography variant="h6" color="inherit">
+                    profile
+                  </Typography>
+                </Box>
+              </Link>
+              
             </Box>
-<div className='searchPosition'>
-
-            <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+            <div className="searchPosition">
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
+                <InputBase
+                  placeholder="Search…"
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </div>
             </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-            
-</div>
-
           </Toolbar>
         </AppBar>
       </div>
