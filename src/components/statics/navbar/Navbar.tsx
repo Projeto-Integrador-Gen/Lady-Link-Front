@@ -111,6 +111,7 @@ export default function Navbar() {
       theme: "light",
       });
     navigate('/login')
+    setAuth(true)
 
   }
 
@@ -164,6 +165,7 @@ export default function Navbar() {
                       label="Home"
                       value="home"
                       icon={<HomeRoundedIcon />}
+                      className={"navigationBtnCor"}
                       
                     />
                   </BottomNavigation>
@@ -179,7 +181,8 @@ export default function Navbar() {
                       <BottomNavigationAction
                         label="Posts"
                         value="post"
-                        icon={<CategoryOutlinedIcon />}
+                        icon={<CategoryOutlinedIcon  />}
+                        className={"navigationBtnCor"}
                        
                       />
                     </BottomNavigation>
@@ -197,6 +200,7 @@ export default function Navbar() {
                         label="Temas"
                         value="temas"
                         icon={<ReorderRoundedIcon />}
+                        className={"navigationBtnCor"}
                       />
                     </BottomNavigation>
                   </Box>
@@ -213,6 +217,7 @@ export default function Navbar() {
                         label="+ Tema"
                         value="tema"
                         icon={<PlaylistAddCheckRoundedIcon />}
+                        className={"navigationBtnCor"}
                       />
                     </BottomNavigation>
                   </Box>
@@ -229,6 +234,7 @@ export default function Navbar() {
                         label="About"
                         value="about"
                         icon={<InfoOutlined />}
+                        className={"navigationBtnCor"}
                       />
                     </BottomNavigation>
                   </Box>
@@ -245,6 +251,7 @@ export default function Navbar() {
                         label="Perfil"
                         value="perfil"
                         icon={<PersonOutlineRoundedIcon />}
+                        className={"navigationBtnCor"}
                       />
                     </BottomNavigation>
                   </Box>

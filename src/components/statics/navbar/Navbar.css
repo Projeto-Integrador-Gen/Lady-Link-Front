@@ -34,9 +34,15 @@
     justify-content: center;
     align-items: center;
     background-color: transparent !important;
-    color: black !important;    
+    color: #000000 !important;    
 }
 
+.navigationBtnCor .Mui-selected{
+      color: #ffffff !important;
+}
+.navigation .Mui-selected .MuiSvgIcon-root{
+    fill: #ffffff !important;    
+}
 
 .botoes{
     display: flex; 
