@@ -260,7 +260,7 @@ export default function Navbar() {
 
               
 
-              <Box mx={1}>
+              <Box className='hide' mx={1}>
                 <div className="searchPosition">
                   <div className={classes.search}>
                     <div className={classes.searchIcon}>
