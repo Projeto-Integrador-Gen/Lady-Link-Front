@@ -4,9 +4,21 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.titulo{
+.titulo1{
+    font-size: 60px !important;
     color: white !important;
     font-Weight: "bolder"
+}
+
+.titulo2{
+    margin-bottom: 0px !important;
+    font-size: 30px !important;
+    color: white !important;
+}
+
+.titulo3{
+    margin-top: 90px !important;
+    font-size: 30px !important;
 }
 
 .botao{

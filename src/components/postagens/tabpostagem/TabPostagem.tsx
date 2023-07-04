@@ -27,7 +27,13 @@ function TabPostagem() {
         </TabPanel>
         <TabPanel value="2">
           <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ut eveniet natus totam et, voluptate dicta tempore alias, odio nobis non eius cupiditate minima inventore pariatur! Ipsum itaque consectetur voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo velit consequuntur suscipit fugiat, nam quis quod quaerat veritatis et, vel ratione beatae, facere neque! Quo animi porro voluptate saepe deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci, officia aut quidem dolorum deserunt iure dolorem doloribus velit nobis quas consequatur at ullam odit, nesciunt est nulla nihil excepturi!</Typography>
+          <Typography variant="body1" gutterBottom color="textPrimary" align="justify" className='descricao'>Nosso objetivo é garantir a participação plena e efetiva das mulheres e a igualdade de oportunidades, reconhecer e valorizar o trabalho de assistência e doméstico não remunerado, ajudando a resolver um problema socioeconômico e conectando mulheres ao mercado de trabalho.Mesmo que as empresas estejam caminhando para garantir a inclusão e os direitos das mulheres no mercado de trabalho, ainda nos deparamos com alguns pontos de atenção.
+
+Um relatório do Banco Mundial apontou que, mesmo as mulheres sendo a maioria da população brasileira e ainda 43% da força total de trabalho, elas ainda têm baixo nível de ocupação nos cargos de liderança. Por exemplo, somente 37% das vagas são destinadas a uma gerência feminina, e 10,5% das cadeiras parlamentares são ocupadas por mulheres.
+
+Dessa forma, é possível perceber que, mesmo com todo avanço e luta inclusiva, as mulheres ainda são discriminadas em relação aos homens quando o assunto é ascensão profissional.
+
+De forma geral, o público feminino está relacionado com trabalhos de menores salários, tendo inclusive rendimentos menores do que os dos homens, atuando na mesma empresa e no mesmo cargo. </Typography>
         </TabPanel>
       </TabContext>
     </>

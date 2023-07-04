@@ -1,6 +1,13 @@
 .titulo{
+   margin-bottom: -70px !important;
+   font-size: 30px !important;
+   font-weight: bold;
+ }
 
-    font-weight: bold;
+ .descricao{
+   
+   font-size: 20px !important;
+   color: white !important;
  }
  
  .nav{

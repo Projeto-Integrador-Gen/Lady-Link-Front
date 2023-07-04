@@ -41,9 +41,9 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className='fundao'>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinda!</Typography>
-                        <Typography variant="h6" gutterBottom color="textPrimary" component="h6" align="center" className='titulo'>Mesmo que as empresas tenham vontade de mudar o cenário atual empregando mais mulheres, é importante lembrar que a igualdade de gênero no mercado de trabalho ainda é um reflexo de um conjunto de crenças e práticas antigas, que necessitam de planejamento e ação para serem definitivamente deixadas de lado.</Typography>
-                    </Box><Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Oportunidades!</Typography>
+                        <Typography variant="h2" gutterBottom color="textPrimary" component="h2" align="center" className='titulo1'>Seja Bem Vinda!</Typography>
+                        <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='titul2'>Lady Link,conectando mulheres ao mercado de trabalho !</Typography>
+                    </Box><Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo3'>Oportunidades!</Typography>
                     
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
