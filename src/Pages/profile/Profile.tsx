@@ -1,7 +1,7 @@
 import React from 'react'
 import {Typography, Grid, Button, Paper} from '@material-ui/core';
 import {Box} from '@mui/material';
-import './profile.css';
+import './Profile.css';
 import Woman from "../../assets/Imagem/woman.png"
 import ListaPostagem from '../../components/postagens/listapostagem/ListaPostagem';
 
