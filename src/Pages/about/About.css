@@ -43,7 +43,12 @@
 
 .imagemlogo{
     width: 10vh;
-    margin-left: 200px;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0px auto;
+    color: #A4133C;
+    display: flex;
+    justify-content: center;
 }
 
 .valores{
@@ -90,10 +95,10 @@
 .titles{
     list-style: none;
     box-sizing: border-box;
-    font-size: 16px;
-    font-family: Poppins, sans-serif !important;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 6rem;
     width: 65%;
     margin: 0px auto;
+    color: #A4133C;
+    display: flex;
+    justify-content: center;
 }
