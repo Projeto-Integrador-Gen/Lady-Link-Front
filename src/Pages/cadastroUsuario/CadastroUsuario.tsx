@@ -163,7 +163,7 @@ function CadastroUsuario() {
                     placeholder="Senha"
                     name='senha'
                 />
-                <input
+                <TextField
                     value={confirmarSenha}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
                     id='confirmarSenha'
