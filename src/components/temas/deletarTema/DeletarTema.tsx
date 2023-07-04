@@ -90,12 +90,12 @@ function DeletarTema() {
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
                 <Button onClick={sim}>
-                <img width="30" height="30" src="https://img.icons8.com/material/24/facebook-like--v1.png" alt="facebook-like--v1"/>
+                <img width="30" height="30" src="https://img.icons8.com/material/24/facebook-like--v1.png" alt="Botão confirmar"/>
                 </Button>
               </Box>
               <Box mx={2}>
                 <Button onClick={nao}>
-                <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/cancel.png" alt="cancel"/>
+                <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/cancel.png" alt="Botão cancelar"/>
                 </Button>
               </Box>
             </Box>

@@ -114,7 +114,7 @@ function CadastroTema() {
         <Typography variant="h3" color="textSecondary" component="h1" align="center">New Tema</Typography>
         <TextField value={tema.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
         <Button className='btn-submit' type="submit">
-        <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/100/filled-sent.png" alt="filled-sent"/>
+        <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/100/filled-sent.png" alt="Botão de envio"/>
         </Button>
       </form>
     </Container>

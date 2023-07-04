@@ -31,7 +31,7 @@ function About() {
                 <CssBaseline />
                 <Container fixed>
                         <h1 className='titles'>Sobre a LadyLink  </h1>
-                        <img className='imagemlogo' src={LadyLink} alt="" />
+                        <img className='imagemlogo' src={LadyLink} alt="Logo do site" />
                    
                     <h3 className='about alinhado'>
                         É uma empresa dedicada a realçar a potência e o poder das mulheres no mercado de trabalho. Acreditamos que todas as mulheres possuem habilidades e talentos únicos que merecem ser reconhecidos e valorizados. Por meio da nossa plataforma de rede social, buscamos criar um ambiente inclusivo e inspirador, onde as mulheres podem se conectar, compartilhar conhecimentos e alcançar o sucesso profissional.
@@ -43,7 +43,7 @@ function About() {
                     <Grid container spacing={3}>
                         <Grid item xs={4} >
                             <Paper elevation={6} className={classes.paper}><Typography />
-                                <h1>Valores</h1>  <img src={Valores} alt="" />
+                                <h1>Valores</h1>  <img src={Valores} alt="Valores da Lady Link" />
 
                                 <Box className='alinhado'> <h2>Empoderamento</h2> <h3>Acreditamos no poder do empoderamento feminino para transformar vidas e impulsionar mudanças positivas na sociedade.</h3>
 
@@ -59,7 +59,7 @@ function About() {
                         </Grid>
                         <Grid item xs={4}>
                             <Paper elevation={6} className={classes.paper}>
-                                <h1>Visão</h1>  <img src={Visao} alt="" />
+                                <h1>Visão</h1>  <img src={Visao} alt="Visão da Lady Link" />
                                 <Box className='alinhado'>
                                     <h3>Queremos construir um mundo onde todas as mulheres tenham igualdade de oportunidades e sejam reconhecidas por seus talentos.
 
@@ -74,7 +74,7 @@ function About() {
                             </Paper>
                         </Grid>
                         <Grid item xs>
-                            <Paper elevation={6} className={classes.paper}><h1>Missao</h1><img src={Missao} alt="" /><Box className='alinhado'> <h3>
+                            <Paper elevation={6} className={classes.paper}><h1>Missao</h1><img src={Missao} alt="Missão da Lady Link" /><Box className='alinhado'> <h3>
                                 Promover a igualdade de gênero e empoderar as mulheres em suas carreiras. <h4>Queremos proporcionar oportunidades de crescimento, networking e aprendizado, ajudando-as a alcançar seus objetivos e a quebrar barreiras no mundo corporativo.</h4><h4>Acreditamos que quando as mulheres são fortalecidas e encorajadas, elas podem conquistar qualquer coisa.</h4>
                             </h3></Box>
 
@@ -193,7 +193,7 @@ function About() {
                                 <div>
 
                                     <Button  {...bindTrigger(popupState)}>
-                                        <img className='imgprofile' src="https://avatars.githubusercontent.com/u/108840058?v=4" alt="Foto Perfil Lucas Reck" />
+                                        <img className='imgprofile' src="https://avatars.githubusercontent.com/u/108840058?v=4" alt="Foto Perfil Reynaldo Sales" />
                                     </Button>
                                     <Popover
                                         {...bindPopover(popupState)}
@@ -218,7 +218,7 @@ function About() {
                                 <div>
 
                                     <Button  {...bindTrigger(popupState)}>
-                                        <img className='imgprofile' src="https://avatars.githubusercontent.com/u/108590345?v=4" alt="Foto Perfil Sartori" />
+                                        <img className='imgprofile' src="https://avatars.githubusercontent.com/u/108590345?v=4" alt="Foto Perfil Fernando Sartori" />
                                     </Button>
                                     <Popover
                                         {...bindPopover(popupState)}

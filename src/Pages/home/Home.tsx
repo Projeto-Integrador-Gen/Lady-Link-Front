@@ -53,7 +53,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src={woman3} alt="" width="600px" height="600px" />
+                    <img src={woman3} alt="Mulher sentada na frente do computador" width="600px" height="600px" />
                 </Grid>
                 <Grid item className='postagens'>
                     <TabPostagem />
