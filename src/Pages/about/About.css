@@ -1,6 +1,5 @@
-npm run :-moz-drag-over.font{
-    font-family: 'Roboto', sans-serif;;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap%27');
+
 
 .fontStyle{
     font-size: normal;
@@ -8,6 +7,7 @@ npm run :-moz-drag-over.font{
     line-height: 1.5;
     font-size: 14px;
     color: #0a0a0a;
+    font-family: 'Roboto', sans-serif;
     
 }
 
@@ -23,16 +23,77 @@ npm run :-moz-drag-over.font{
 .imgprofile{
     border: 1px solid #ddd;
   border-radius: 30px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   padding: 5px;
-  
-    cursor: pointer;
+  cursor: pointer;
     float: left;
     text-align: justify;
+}
+
+.adireita{
+    float: right;
+}
+
+.about{
+    margin-top: 50px;
+    text-align: center;
+   
+}
+
+.imagemlogo{
+    width: 10vh;
+    margin-left: 200px;
+}
+
+.valores{
+    display: flex;   
+    justify-content:flex-start;
+    margin-left: 200px;
+    margin-top: 100px;
+
+
+}
+
+.visao{
+    display: flex;
+    margin-right: 2px;
+    margin-left: 200px;
+    margin-top: 50px;
+    
+}
+
+.missao{
+    display: flex;    
+    margin-left: 200px;
+    margin-top: 50px;
+ 
 }
 
 .palavrachave{
     font: bold !important;
 }
 
+
+.alinhado{
+    text-align: justify;
+}
+
+.kEvuFQ {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: rgb(66, 70, 77);
+}
+
+.titles{
+    list-style: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Poppins, sans-serif !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 65%;
+    margin: 0px auto;
+}
