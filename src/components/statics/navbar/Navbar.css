@@ -33,6 +33,7 @@
     justify-content: center;
     align-items: center;
     background-color: transparent !important;
+    color: black !important;
     
     
     
@@ -42,5 +43,10 @@
     display: flex; 
     justify-content: center;
     align-items: center;
+    
+}
+
+.actionNav{
+    color: white !important;
     
 }

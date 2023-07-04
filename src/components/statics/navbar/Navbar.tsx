@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 // BottomNavigation Style
 const useStylesB = makeStyles({
-  rootB: {
+  root: {
     width: 5,
     color: 'red',
   },
@@ -154,6 +154,7 @@ export default function Navbar() {
                       label="Home"
                       value="home"
                       icon={<HomeRoundedIcon />}
+                      
                     />
                   </BottomNavigation>
                 </Link>
@@ -169,6 +170,7 @@ export default function Navbar() {
                         label="Posts"
                         value="post"
                         icon={<CategoryOutlinedIcon />}
+                       
                       />
                     </BottomNavigation>
                   </Box>
