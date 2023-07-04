@@ -25,6 +25,7 @@
    border-color: white!important;
    background-color: "#76baad"; 
    color: white!important; 
+   display: none !important;
 }
 
 .postagens{
