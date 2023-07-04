@@ -23,6 +23,7 @@ import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
 import { blue, red } from '@material-ui/core/colors';
 import InfoRoundedIcon from '@material-ui/icons/InfoRounded';
 import PersonOutlineRoundedIcon from '@material-ui/icons/PersonOutlineRounded';
+import { toast } from 'react-toastify';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -99,7 +100,16 @@ export default function Navbar() {
   const dispatch = useDispatch();
   function goLogout() {
     dispatch(addToken(''))
-    alert("Tchau, até logo mais")
+    toast.info('Tchau Tchau! Até logo', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
     navigate('/login')
 
   }
