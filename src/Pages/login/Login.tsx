@@ -72,7 +72,8 @@ function updatedModel(e: ChangeEvent<HTMLInputElement>) {
   
   
   return (
-    <div className="container" id="container"> 
+    <Grid className="bodi">
+    <div className="container " id="container"> 
     <div className="form-container sign-in-container">
         <form onSubmit={onSubmit} className="container.right-panel-active .sign-up-container ">
           <h1>Login</h1>
@@ -110,5 +111,6 @@ function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         </div>
       </div>
     </div>
+    </Grid>
   );
 }

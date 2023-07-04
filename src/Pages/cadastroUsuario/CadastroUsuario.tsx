@@ -134,6 +134,7 @@ function CadastroUsuario() {
         }
     }
     return (
+        <Grid className="bodi">
         <div className="container" id="container">
            <div className="form-container sign-in-container">            
             <form onSubmit={onSubmit}>
@@ -188,7 +189,7 @@ function CadastroUsuario() {
                 </div>
                 </div>
             </div>
-
+            </Grid>
             );
 }
 
