@@ -139,29 +139,35 @@ function CadastroUsuario() {
            <div className="form-container sign-in-container">            
             <form onSubmit={onSubmit}>
                 <h1>Criar Conta</h1>
-                <input
+                <TextField
                     value={user.nome}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                     id='nome'
                     type="text"
                     placeholder="Nome Completo"
                     name='nome'
+                    variant="filled" fullWidth
+                    className='paddingField '
                 />
-                <input
+                <TextField
                     value={user.usuario}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                     id='user'
                     type="email"
                     placeholder="Email"
                     name='usuario'
+                    variant="filled" fullWidth
+                    className='paddingField '
                 />
-                <input
+                <TextField
                     value={user.senha}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                     id='senha'
                     type="password"
                     placeholder="Senha"
                     name='senha'
+                    variant="filled" fullWidth
+                    className='paddingField '
                 />
                 <TextField
                     value={confirmarSenha}
@@ -170,6 +176,8 @@ function CadastroUsuario() {
                     type="password"
                     placeholder="Confirmar Senha"
                     name='confirmarSenha'
+                    variant="filled" fullWidth
+                    className='paddingField '
                 />
                 <button type="submit">Criar</button>
             </form>
