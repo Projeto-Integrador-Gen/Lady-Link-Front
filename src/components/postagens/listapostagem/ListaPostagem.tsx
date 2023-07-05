@@ -75,7 +75,7 @@ function ListaPostagem() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-          {post.tema?.titulo}
+          {post.titulo}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
           {post.conteudo}
